@@ -17,3 +17,15 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
  @import 'font-awesome';
+
+body
+{
+	background-color: #c4c4c4;
+}
+
+.contentmargin
+{
+	margin-top: 40px;
+	z-index: -1;
+}
+
