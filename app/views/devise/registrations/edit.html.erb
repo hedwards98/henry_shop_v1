@@ -1,4 +1,19 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<center>
+<div class="container contentmargin">
+<div class="row">
+
+  <div class="col-md-3">
+  </div>
+
+
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">EDIT PROFILE</h3>
+  </div>
+  <div class="panel-body">
+
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -11,6 +26,12 @@
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+  </br>
+    <%= f.text_field :name %>
+  </div>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
@@ -32,7 +53,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update"%>
   </div>
 <% end %>
 
@@ -41,3 +62,15 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+
+</div>
+
+  <div class="col-md-3">
+  </div>
+
+
+<!-- row -->
+</div>
+<!-- container -->
+</div>
+</center>
