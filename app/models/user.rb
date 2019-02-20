@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :orders
+
+  def admin?
+  	return role == "admin"
+  end
+
 end
